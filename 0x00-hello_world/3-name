@@ -1,2 +1,2 @@
 #!/bin/bsah
-gcc$CFILE -o cisfun
+gcc $CFILE -o cisfun

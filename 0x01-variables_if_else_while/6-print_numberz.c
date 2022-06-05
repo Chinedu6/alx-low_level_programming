@@ -1,77 +1,22 @@
-#include <stdio.h> 
-#define MAX 100 
+#include <stdio.h>
+/**
+ *main - starting point of the program
+ *
+ *Return: 0
+ */
+int main(void)
+{
+	int num;
 
-  
-// Function to print the digit of 
-// number N 
+	num = 0;
 
-void printDigit(int N) 
-{ 
+	while (num <= 9)
+	{
+		putchar(num + '0');
+		num++;
+	}
 
-    // To store the digit 
+	putchar('\n');
 
-    // of the number N 
-
-    int arr[MAX]; 
-
-    int i = 0; 
-
-    int j, r; 
-
-  
-
-    // Till N becomes 0 
-
-    while (N != 0) { 
-
-  
-
-        // Extract the last digit of N 
-
-        r = N % 10; 
-
-  
-
-        // Put the digit in arr[] 
-
-        arr[i] = r; 
-
-        i++; 
-
-  
-
-        // Update N to N/10 to extract 
-
-        // next last digit 
-
-        N = N / 10; 
-
-    } 
-
-  
-
-    // Print the digit of N by traversing 
-
-    // arr[] reverse 
-
-    for (j = i - 1; j > -1; j--) { 
-
-        printf("%d ", arr[j]); 
-
-    } 
-} 
-
-  
-// Driver Code 
-
-int main() 
-{ 
-
-    int N = 3452897; 
-
-  
-
-    printDigit(N); 
-
-    return 0; 
-} 
+	return (0);
+}

@@ -1,31 +1,27 @@
 #include <stdio.h>
 
 /**
- * main - Prints the first 52 fibonacci numbers
- *
- * Return: Nothing!
- */
+* main - Prints the sum of natural numbers less than 1024 which are \
+* multiples of 3 or 5
+*
+* Return: Always 0.
+*/
 int main(void)
 {
-	int i = 0;
-	long j = 1, k = 2;
+	int num, sum;
 
-	while (i < 50)
+	num = 1;
+	sum = 0;
+
+	while (num < 1024)
 	{
-		if (i == 0)
-			printf("%ld", j);
-		else if (i == 1)
-			printf(", %ld", k);
-		else
-		{
-			k += j;
-			j = k - j;
-			printf(", %ld", k);
-		}
+		if ((num % 3) || (num % 5))
+			sum += num;
 
-		++i;
+		num++;
 	}
 
-	printf("\n");
+	printf("%d\n", num);
+
 	return (0);
 }

@@ -1,27 +1,27 @@
 #include <stdio.h>
-
 /**
-* main - Prints the sum of natural numbers less than 1024 which are \
-* multiples of 3 or 5
-*
-* Return: Always 0.
-*/
+ * main - Prints out the first 50 Fibonnaci numbers.
+ *
+ * Return: Always 0.
+ */
+
 int main(void)
 {
-	int num, sum;
+	int i;
+	long int j = 1;
+	long int k = 1;
+	long int sum;
 
-	num = 1;
-	sum = 0;
-
-	while (num < 1024)
+	printf("%d", 1);
+	for (i = 1; i <= 49; i++)
 	{
-		if ((num % 3) || (num % 5))
-			sum += num;
-
-		num++;
+		sum = j + k;
+		printf(", %ld", sum);
+		j = k;
+		k = sum;
 	}
 
-	printf("%d\n", num);
+	printf("\n");
 
 	return (0);
 }

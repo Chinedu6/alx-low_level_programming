@@ -1,23 +1,27 @@
 #include <stdio.h>
 
 /**
- * main - Prints the sum of all multiples of 3 or 5 up to 102
- * Return: Always (Success)
- */
+* main - Prints the sum of natural numbers less than 1024 which are \
+* multiples of 3 or 5
+*
+* Return: Always 0.
+*/
 int main(void)
 {
-	int i, z = 0;
+	int num, sum;
 
-	while (i < 1024)
+	num = 1;
+	sum = 0;
+
+	while (num < 1024)
 	{
-		if ((i % 3 == 0) || (i % 5 == 0))
-		{
-			z += i;
-		}
+		if ((num % 3) || (num % 5))
+			sum += num;
 
-		i++;
+		num++;
 	}
 
-	printf("%d\n", z);
+	printf("%d\n", num);
+
 	return (0);
 }

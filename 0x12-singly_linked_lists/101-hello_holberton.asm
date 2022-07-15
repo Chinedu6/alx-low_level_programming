@@ -14,4 +14,3 @@ main:
 	mov eax, 0
 	ret
 Footer
-© 2022 GitHub, Inc.
